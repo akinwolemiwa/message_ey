@@ -1,0 +1,72 @@
+name: message_app
+
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.2
+  flutter_riverpod: ^2.4.4
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.4
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  grouped_list: ^5.1.2
+  http: ^1.2.0
+  logger: ^2.0.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_flavorizr: ^2.1.5
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/png/
+
+flavorizr:
+  ide: "vscode"
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+
+  flavors:
+    development:
+      app:
+        name: "Message App - Dev"
+      android:
+        icon: "assets/png/m_app.png"
+        applicationId: "dev.com.message"
+      ios:
+        icon: "assets/png/m_app.png"
+        bundleId: "dev.com.message"
+
+    staging:
+      app:
+        name: "Message App - Staging"
+      android:
+        icon: "assets/png/m_app.png"
+        applicationId: "staging.com.message"
+      ios:
+        icon: "assets/png/m_app.png"
+        bundleId: "staging.com.message"
+
+    production:
+      app:
+        name: "Message App"
+      android:
+        icon: "assets/png/m_app.png"
+        applicationId: "com.message"
+      ios:
+        icon: "assets/png/m_app.png"
+        bundleId: "com.message"
